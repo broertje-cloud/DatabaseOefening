@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DatabaseOefening.Model.DatabaseTabel">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Geef hier een nieuwe vraag in"/>
+            <Entry x:Name= "QuestionEntry" Placeholder="Maximum 200 tekens!"/>
+            <Button x:Name="SaveButten" Text="Save" Clicked="SaveButten_Clicked"/>
+            <ListView x:Name="QuestionListView" ItemSelected="QuestionListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding QuestionBody}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
